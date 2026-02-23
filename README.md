@@ -1,6 +1,7 @@
 # OpenClaw / ClawdBot Mini Documentation
 
 This is a short guide providing common solutions, such as solving and preventing installation problems.
+This guideline is intended for my personal documentation, but you can use it as well with your own risk.
 
 ## Important Requirements Before Installation or Updating Settings
 
@@ -11,6 +12,9 @@ Before proceeding, find a reliable LLM provider:
 - Once installation and setup of OpenClaw are complete, you can switch to a cheaper or free lower-quality LLM model.
 - Prepare your LLM provider and obtain any necessary API keys.
 - Settings can be changed later, including switching to local options like Ollama.
+
+Below installation can be run using the script:
+https://github.com/yoyokits/OpenClawTips/blob/main/install.sh
 
 ## Ubuntu Installation Steps
 
