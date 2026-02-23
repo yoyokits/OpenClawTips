@@ -1,48 +1,89 @@
-# OpenClaw/ClawdBot Mini Documentation
-This is short documentation for common solutions like installation problem solving and prevention
+# OpenClaw / ClawdBot Mini Documentation
 
-Important requirement before installation/update settings:
-Find good LLM provider
-- Use as powerfull LLM model that you can get like Claude Opus 4.5 or other that you think powerfull
-- Using low quality LLM will produce many error
-- After installation and setting up OpenClaw are done, then you can change to cheap/free lower quality LLM model
-- Prepare LLM provider, get key if necessary
-- Later can be changed, even for local like using Ollama
+This is a short guide providing common solutions, such as solving and preventing installation problems.
 
-Ubuntu Installation required:
-1. sudo apt update && sudo apt upgrade -y
-2. sudo apt install -y curl git build-essential
-3. Nodejs with certain version:
-4. Install Node.js version 22, must be 22, therefore cannot use default ubuntu installation, use from repository instead
-   Install NVM:
-   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-   
-   Activate:
-   source ~/.bashrc
-   
-   Install Node.js 22:
-   nvm install 22
-   nvm use 22
-   nvm alias default 22
+## Important Requirements Before Installation or Updating Settings
 
-   Verify:
-   node -v
-   
-6. Install OpenClaw
+Before proceeding, find a reliable LLM provider:
+
+- Use the most powerful LLM model available, such as Claude Opus 4.5 or another high-quality option.
+- Using a low-quality LLM may result in numerous errors.
+- Once installation and setup of OpenClaw are complete, you can switch to a cheaper or free lower-quality LLM model.
+- Prepare your LLM provider and obtain any necessary API keys.
+- Settings can be changed later, including switching to local options like Ollama.
+
+## Ubuntu Installation Steps
+
+Follow these steps to install OpenClaw on Ubuntu.
+
+1. Update and upgrade your system packages:
+
+   ```bash
+   sudo apt update && sudo apt upgrade -y
+   ```
+
+2. Install required dependencies:
+
+   ```bash
+   sudo apt install -y curl git build-essential
+   ```
+
+3. Install Node.js (version 22 is required; do not use the default Ubuntu installation):
+
+   - Install NVM (Node Version Manager):
+
+     ```bash
+     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+     ```
+
+   - Activate NVM:
+
+     ```bash
+     source ~/.bashrc
+     ```
+
+   - Install and set Node.js version 22 as default:
+
+     ```bash
+     nvm install 22
+     nvm use 22
+     nvm alias default 22
+     ```
+
+   - Verify the installation:
+
+     ```bash
+     node -v
+     ```
+
+4. Install OpenClaw:
+
+   ```bash
    curl -fsSL https://openclaw.ai/install.sh | bash
    openclaw onboard --install-daemon
-   - Install with minimal skill installed, because eventhough the skills are standard, there was a case that a skill actually a maleware.
+   ```
 
-7. OpenClaw initialization:
-   - Tell OpenClaw who are you: I am Yohanes, I am a software developer, I speak German, English and Indonesian.
-   - Tell OpenClaw what do you imagine the assistance: You are smart, you will arrange my schedule and help me to develop software
-8. Backup the whole home/.openclaw folder regularly, using git is the best to enable reverting the change if there is a failure.
-   - You can ask OpenClaw to setup git repository for .openclaw folder contents.
-   - Or write these command line to setup git:
-     cd ~/.openclaw
-     git init
-     git add .
-     git commit -m "Initial commit - OpenClaw config backup"
-   - You can ask OpenClaw to commit the change if there is update and the update is successfully
+   **Note:** Install with minimal skills enabled. Although standard skills are generally safe, there have been cases where a skill was identified as malware.
 
-   Because this system can access all data, therefore don't use your main computer to install it.
+5. Initialize OpenClaw:
+
+   - Introduce yourself to OpenClaw (example): "I am Yohanes, I am a software developer, I speak German, English, and Indonesian."
+   - Describe your expectations for the assistant (example): "You are smart, you will arrange my schedule and help me to develop software."
+
+## Backup Recommendations
+
+Regularly back up the entire `~/.openclaw` folder. Using Git is recommended for version control and easy reversion of changes in case of failures.
+
+- You can ask OpenClaw to set up a Git repository for the `.openclaw` folder contents.
+- Alternatively, set it up manually with these commands:
+
+  ```bash
+  cd ~/.openclaw
+  git init
+  git add .
+  git commit -m "Initial commit - OpenClaw config backup"
+  ```
+
+- After updates, if successful, ask OpenClaw to commit the changes.
+
+**Warning:** This system can access all your data, so do not install it on your main computer. Use a dedicated or virtual machine for safety.
