@@ -1,0 +1,78 @@
+# OpenClaw .gitignore
+# Generated for OpenClaw workspace management
+
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.log
+
+# OpenClaw specific
+# These maybe can be removed if we want backup user data to other openclaw instance
+/workspace/users/*/memory/
+/workspace/users/*/HEARTBEAT.md
+/workspace/users/*/BOOTSTRAP.md
+/workspace/users/*/IDENTITY.md
+/workspace/users/*/AGENTS.md
+/workspace/users/*/TOOLS.md
+/workspace/users/*/USER.md
+/workspace/users/*/SOUL.md
+/workspace/users/*/MEMORY.md
+/workspace/users/*/SESSIONS.md
+
+# Cache and temp files
+/cache/
+/temp/
+*.cache
+*.tmp
+*.temp
+
+# Local configuration
+/config/local.json
+/config/settings.json
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Logs
+/logs/
+*.log
+
+# Node modules
+/node_modules/
+/node_modules/**/*
+
+# User-specific data
+/workspace/users/*/avatar.*
+/workspace/users/*/avatars/
+
+# Backup files
+*.backup
+*.bak
+*.old
+*.orig
+
+# IDE specific
+.idea/
+.vscode/
+*.code-workspace
+
+# OS generated files
+*.DS_Store
+*.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# OpenClaw specific
+*.lock
+*.pid
+*.sock
+*.gz
