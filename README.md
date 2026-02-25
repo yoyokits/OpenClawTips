@@ -88,6 +88,9 @@ Regularly back up the entire `~/.openclaw` folder. Using Git is recommended for 
   git commit -m "Initial commit - OpenClaw config backup"
   ```
 
+Some openclaw specific files can be ignored by git.
+[.gitignore](https://github.com/yoyokits/OpenClawTips/blob/main/.gitignore) is the ignored files list created by openclaw
+
 - After updates, if successful, ask OpenClaw to commit the changes.
 
 **Warning:** This system can access all your data, so do not install it on your main computer. Use a dedicated or virtual machine for safety.
