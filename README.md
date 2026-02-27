@@ -93,4 +93,10 @@ Some openclaw specific files can be ignored by git.
 
 - After updates, if successful, ask OpenClaw to commit the changes.
 
+## OpenClaw Setting Documentation
+
+OpenClaw setting is saved in openclaw.json, this setting contents are always updated regularly.
+
+[Official OpenClaw settings documentation](https://docs.openclaw.ai/gateway/configuration-reference) has complete latest settings variables.
+
 **Warning:** This system can access all your data, so do not install it on your main computer. Use a dedicated or virtual machine for safety.
