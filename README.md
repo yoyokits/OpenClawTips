@@ -29,8 +29,10 @@ Follow these steps to install OpenClaw on Ubuntu.
 2. Install required dependencies:
 
    ```bash
-   sudo apt install -y curl git build-essential
+   sudo apt install -y curl git build-essential procps file
    ```
+
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
    Or if you install Ubuntu under VirtualBox, use it instead for later install Guest Additions:
 
@@ -72,11 +74,35 @@ Follow these steps to install OpenClaw on Ubuntu.
      ```bash
      node -v
      ```
+6. Install Homebrew for installing OpenClaw add ins.
+
+   ```bash
+   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+   ```
+
+   Inform Shell the Homebrew path:
+
+   ```bash
+   test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+   test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+   echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc
+   ```
 
 5. Install OpenClaw:
 
    ```bash
-   curl -fsSL https://openclaw.ai/install.sh | bash
+   npm i -g openclaw
+   ```
+
+   Or:
+
+   ```bash
+   curl -fsSL https://openclaw.ai/install.sh | bash -s -- --install-method git   
+   ```
+
+   OpenClaw settings:
+
+   ```bash
    openclaw onboard --install-daemon
    ```
 
