@@ -32,7 +32,13 @@ Follow these steps to install OpenClaw on Ubuntu.
    sudo apt install -y curl git build-essential
    ```
 
-3. Install Node.js (version 22 is required; do not use the default Ubuntu installation):
+   Or if you install Ubuntu under VirtualBox, use it instead:
+   
+   ```bash
+   sudo apt install -y curl git build-essential dkms linux-headers-$(uname -r)
+   ```
+
+4. Install Node.js (version 22 is required; do not use the default Ubuntu installation):
 
    - Install NVM (Node Version Manager):
 
@@ -60,7 +66,7 @@ Follow these steps to install OpenClaw on Ubuntu.
      node -v
      ```
 
-4. Install OpenClaw:
+5. Install OpenClaw:
 
    ```bash
    curl -fsSL https://openclaw.ai/install.sh | bash
@@ -69,7 +75,7 @@ Follow these steps to install OpenClaw on Ubuntu.
 
    **Note:** Install with minimal skills enabled. Although standard skills are generally safe, there have been cases where a skill was identified as malware.
 
-5. Initialize OpenClaw:
+6. Initialize OpenClaw:
 
    - Introduce yourself to OpenClaw (example): "I am Yohanes, I am a software developer, I speak German, English, and Indonesian."
    - Describe your expectations for the assistant (example): "You are smart, you will arrange my schedule and help me to develop software."
