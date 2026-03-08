@@ -32,10 +32,17 @@ Follow these steps to install OpenClaw on Ubuntu.
    sudo apt install -y curl git build-essential
    ```
 
-   Or if you install Ubuntu under VirtualBox, use it instead:
-   
+   Or if you install Ubuntu under VirtualBox, use it instead for later install Guest Additions:
+
    ```bash
    sudo apt install -y curl git build-essential dkms linux-headers-$(uname -r)
+   ```
+
+   Install Virtual Box Guest Additions (after inserting Guest Additions virtual CD):
+   
+   ```bash
+   cd /media/username/VBox... (check your VBox Guesst Addition folder, it should be automatically opened in File Manager)
+   sudo ./VBoxLinuxAdditions.run
    ```
 
 4. Install Node.js (version 22 is required; do not use the default Ubuntu installation):
