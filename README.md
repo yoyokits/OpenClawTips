@@ -32,12 +32,10 @@ Follow these steps to install OpenClaw on Ubuntu.
    sudo apt install -y curl git build-essential procps file
    ```
 
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-   Or if you install Ubuntu under VirtualBox, use it instead for later install Guest Additions:
+   If you install Ubuntu under VirtualBox, use it as well for later install Guest Additions:
 
    ```bash
-   sudo apt install -y curl git build-essential dkms linux-headers-$(uname -r)
+   sudo apt install -y dkms linux-headers-$(uname -r)
    ```
 
    Install Virtual Box Guest Additions (after inserting Guest Additions virtual CD):
