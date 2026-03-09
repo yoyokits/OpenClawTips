@@ -111,6 +111,21 @@ Follow these steps to install OpenClaw on Ubuntu.
    - Introduce yourself to OpenClaw (example): "I am Yohanes, I am a software developer, I speak German, English, and Indonesian."
    - Describe your expectations for the assistant (example): "You are smart, you will arrange my schedule and help me to develop software."
 
+7. Connect to Ollama from the host OS:
+   
+   Check whether Ollama is connected.
+
+   ```bash
+   curl http://192.168.1.XX:11434/api/tags
+   ```
+
+   Tell Linux the Ollama host:
+   
+
+   ```bash
+   export OLLAMA_HOST=192.168.178.xx:11434
+   ```
+
 ## Backup Recommendations
 
 Regularly back up the entire `~/.openclaw` folder. Using Git is recommended for version control and easy reversion of changes in case of failures.
